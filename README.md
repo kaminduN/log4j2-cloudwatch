@@ -25,7 +25,7 @@ To include the logger in your project, add this to your POM file:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<Configuration packages="com.github.kana1.logging.log4j" status="DEBUG">
+<Configuration packages="com.github.kana1.logging.log4j">
 
 	<Properties>
 		<Property name="application-name">cool-app</Property>
@@ -35,8 +35,8 @@ To include the logger in your project, add this to your POM file:
     <Appenders>
                
         <CloudWatchAppender name="CloudWatch" 
-   							logGroupName="app/my-app-${application-name}" 
-   							logRegionName="us-east-1">
+   			    logGroupName="app/my-app-${application-name}" 
+   			    logRegionName="us-east-1">
 		      <PatternLayout>
 		        <Pattern>${log-pattern}</Pattern>
 		      </PatternLayout>
